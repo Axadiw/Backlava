@@ -1,7 +1,10 @@
 #!/bin/bash
 ( flock -en 9 || exit 1
-export LOCAL_BACKUP_PATH="/mnt/Backup/rsync/"
-export LOGS_PATH="/mnt/Backup/rsync/logs/"
+
+#CONFIG
+
+export LOCAL_BACKUP_PATH="path_to_backup_path"
+export LOGS_PATH="path_to_logs_path"
 SCRIPTS_FOLDER="./Machines/"
 MAX_TIME_BETWEEN_DEDUPLICATIONS=60*60*24*7
 
